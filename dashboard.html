@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      ul li {
+        margin: 10px 0;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+      }
+      ul li i {
+        margin-right: 8px;
+        color: #004d00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <h2 id="welcome-text">Welcome</h2>
+
+      <!-- Admin Content -->
+      <div id="admin-panel" style="display: none">
+        <h3>Admin Dashboard</h3>
+        <p>You have full access to all features.</p>
+        <ul>
+          <li><i data-lucide="users"></i> Manage users</li>
+          <li><i data-lucide="bar-chart-3"></i> View reports</li>
+          <li><i data-lucide="settings"></i> System settings</li>
+        </ul>
+      </div>
+
+      <!-- Manager Content -->
+      <div id="manager-panel" style="display: none">
+        <h3>Manager Dashboard</h3>
+        <p>You can manage submissions and view reports.</p>
+        <ul>
+          <li><i data-lucide="check-circle-2"></i> Review activity</li>
+          <li><i data-lucide="file-bar-chart"></i> Performance summaries</li>
+        </ul>
+      </div>
+
+      <!-- User Content -->
+      <div id="user-panel" style="display: none">
+        <h3>User Dashboard</h3>
+        <p>Welcome to your dashboard.</p>
+        <ul>
+          <li><i data-lucide="user"></i> View profile</li>
+          <li><i data-lucide="edit-2"></i> Edit account info</li>
+          <li><i data-lucide="message-square"></i> Submit feedback</li>
+        </ul>
+      </div>
+
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
